@@ -5,7 +5,7 @@ import "./index.css";
 import {
   Route,
   RouterProvider,
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
 } from "react-router-dom";
 import Layout from "./Layout";
@@ -32,11 +32,12 @@ import Github from "./components/Github/Github";
 //       {
 //         path: "contact",
 //         element: <Contact />,
-//       },
+//       },q
+
 //     ],
 //   },
 // ]);
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
