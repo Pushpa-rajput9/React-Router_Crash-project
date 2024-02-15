@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, NavLink } from "react-router-dom";
 // Link is used in place of <a> tag in router dom
 //NavLink is used
