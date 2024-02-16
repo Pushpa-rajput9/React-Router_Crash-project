@@ -13,7 +13,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import User from "./components/User/User";
-import Github from "./components/Github/Github";
+import Github, { GithubInfoLoader } from "./components/Github/Github";
 // //import Index from "./components/Index.jsx";
 //method 1st
 // const router = createBrowserRouter([
@@ -42,9 +42,15 @@ const router = createHashRouter(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
+
       <Route path="contact" element={<Contact />} />
       <Route path="user/:userid" element={<User />} />
-      <Route path="github" element={<Github />} />
+      <Route
+        loader={GithubInfoLoader}
+        //  Each route can define a "loader" function to provide data to the route element before it renders.
+        path="github"
+        element={<Github />}
+      />
     </Route>
   )
 );
